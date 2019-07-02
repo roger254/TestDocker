@@ -1,11 +1,11 @@
 FROM ubuntu:19.04
 
 # install google chrome
-RUN apt-get -y update && apt-get -y upgrade
+RUN apt-get -y update && apt-get -y upgrade && apt-get install wget -y
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 RUN apt-get -y update && apt-get -y upgrade
-RUN apt-get install google-chrome-stable firefox wget unzip -y
+RUN apt-get install google-chrome-stable firefox unzip -y
 
 # install chromedriver
 RUN apt-get install -y unzip
