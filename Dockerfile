@@ -19,4 +19,4 @@ RUN pip install selenium==3.13.0
 
 COPY . /app
 WORKDIR /app
-python test.py
+RUN python test.py
