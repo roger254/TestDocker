@@ -19,4 +19,5 @@ RUN pip install selenium==3.13.0
 
 COPY . /app
 WORKDIR /app
+COPY geckodriver /usr/local/bin/
 RUN python test.py
