@@ -7,8 +7,6 @@ RUN apt-get install firefox unzip -y
 
 # install chromedriver
 RUN apt-get install -y unzip
-RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
-RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 WORKDIR /tmp
 RUN wget -o https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
 RUN apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev  libncursesw5-dev xz-utils tk-dev
